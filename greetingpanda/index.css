@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6648bb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.panda {
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    height: 170px;
+    width: 170px;
+}
+
+.container {
+    position: relative;
+}
+
+.panda .ear {
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+}
+
+.panda .ear.left {
+    left: 0;
+}
+
+.panda .ear.right {
+    right: 0;
+}
+
+.panda .eye {
+    background-color: #000;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    height: 50px;
+    width: 40px;
+}
+
+.panda .eye.left {
+    border-radius: 100% 60% 80% 60%;
+    transform: translateX(calc(-50% - 35px));
+}
+
+.panda .eye.right {
+    border-radius: 60% 100% 60% 80%;
+    transform: translateX(calc(-50% + 35px));
+}
+
+.panda .eye .eye-roll {
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 12px;
+    width: 12px;
+    transform-origin: center left;
+}
+
+.panda .nose {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.panda .mouth {
+    background: transparent;
+    border-radius: 0 0 50% 50%;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #000;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 50px;
+    width: 50px;
+}
+
+.chat-bubble {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateY(-100%);
+    max-width: 15rem;
+    width: 100%;
+}
+
+.chat-bubble::before {
+    background-color: #f7f7f7;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 25px;
+    transform: translateY(100%);
+    rotate: 45deg;
+    height: 10px;
+    width: 10px;
+}
+
+.message {
+    text-align: center;
+}
+
+.name {
+    font-weight: 800;
+}
+
+@media (max-width: 640px){
+    .chat-bubble{
+        translate: -50% 0;
+    }
+
+    .chat-bubble::before {
+        left: 50%;
+    }
+}
