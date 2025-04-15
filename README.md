@@ -1,2 +1,2 @@
 # icodethis challenges
--Daily coding challnges from icodethis.com 
+- Daily coding challenges from icodethis.com 
